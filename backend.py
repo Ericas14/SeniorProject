@@ -55,7 +55,6 @@ def program(file):
     exact_matches = []
     global categories
     # counted = count_elements(range(1, totalLabels))
-    # print(counted)
 
     # Loop through each component
     for i in range(1, totalLabels):
@@ -108,9 +107,7 @@ def program(file):
                 occurence = (new_arr == curr_x_coor).sum()
                 if occurence > longest_run:
                     longest_run = occurence
-            # print (str(curr_x_coor) + " " + str(longest_run))
 
-            # print("Component " + str(i) + " - width: " + str(w) + " height: " + str(h) + " num pixels: " +
 
             # Step 6 of patent
             if (num_pixels > udn_two) and (num_pixels < udn_three):
@@ -153,7 +150,6 @@ def program(file):
         num_results = 0
         for x in range(len(f_suspected_chars)):
             if (f_suspected_chars[x].maxhr > udn_four):
-                # print(f_suspected_chars[x].maxhr)
                 num_results = num_results + 1
                 # Step 33 of patent
                 ratio = f_suspected_chars[x].maxhr / f_suspected_chars[x].width
@@ -182,9 +178,6 @@ def program(file):
             # print("machine printed")
             categories[file] = 'Machine-printed'
 
-    # print(counted)
-    # print(fcounted)
-    # print(matches)
     print(categories)
 
 
